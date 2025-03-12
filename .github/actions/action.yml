@@ -1,0 +1,9 @@
+name: 'Update body PR'
+description: 'Update body PR'
+inputs:
+  github-token:
+    description: 'GitHub token to authorize requests. The owner of this token will be the user that authorizes the deployment'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
