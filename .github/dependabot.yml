@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    # Dependabot security updates are always triggered by a security advisory, rather than running according to the schedule
+    schedule:
+      interval: daily
+    # Limit number of open pull requests for version updates
+    open-pull-requests-limit: 0
+    # Allow both direct and indirect updates for all packages.
+    allow:
+      - dependency-type: 'all'
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    # Always increase the minimum version requirement to match the new version
+    versioning-strategy: 'increase'
