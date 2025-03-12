@@ -13,14 +13,6 @@ jobs:
       - name: 🏗 Setup repo
         uses: actions/checkout@v2
 
-      - name: 🏗 Setup Node v20.9.0
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.9.0'
-
-      - name: 👷 Install root dependencies
-        run: npm install
-
       - name: 🔨 Update PR Body
         uses: ./.github/actions/update_pr
         with:
